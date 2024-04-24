@@ -1,0 +1,63 @@
+from random import randint
+import turtle
+t = turtle.Turtle()
+from turtle import *
+turtle.colormode(255)
+mylist = []
+
+answer = []
+def drawGraph():
+    user_input = input("Type an integer between 0 and 50 for how many bars you want: ")
+    answer = int(user_input)
+    t.pensize(7)
+    t.speed(0)
+
+    for x in range(answer):
+        rndnum = randint(0,100)
+        mylist.append(rndnum)
+
+    for x in range (len(mylist)):
+       
+        rndR = randint(0,255)
+        rndG = randint(0,255)
+        rndB = randint(0,255)
+        rndColor = (rndR,rndG,rndB)
+        t.pencolor(rndColor)
+        t.left(90)
+        t.forward(mylist[x])
+        t.pu()
+        t.backward(mylist[x])
+        t.forward
+        t.right(180)
+        t.forward(20)
+        t.pd()
+        t.write(mylist[x])
+        t.pu()
+        t.backward(20)
+        t.left(90)
+        t.forward(20)
+        t.pd()
+        
+       
+            
+    t.pu()
+    t.pensize(2)
+    t.pencolor("black")
+               
+    t.forward(20)
+    t.left(90)
+    t.pd()
+    t.forward(150)
+    t.left(90)
+    t.forward(x+235)
+    t.left(90)
+    t.forward(155)
+    t.left(90)
+    t.forward(x+235)
+    t.left(90)
+        
+drawGraph()
+   
+        
+        
+
